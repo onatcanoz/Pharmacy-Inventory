@@ -1,0 +1,39 @@
+﻿@model Pharmacy_Inventory.Models.UpdateMedicineViewModel
+
+@{
+}
+
+<h1>Edit Medicine</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Adı</label>
+        <input type="text" class="form-control" asp-for="Name" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tip</label>
+        <input type="text" class="form-control" asp-for="Type" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Stok</label>
+        <input type="number" class="form-control" asp-for="Stock">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fiyat</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Son Kullanma Tarihi</label>
+        <input type="date" class="form-control" asp-for="ExpirationDate" readonly>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-danger"
+    asp-action="Delete"
+    asp-controller="Medicines">Delete</button>
+
+</form>

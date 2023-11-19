@@ -1,0 +1,29 @@
+﻿@model Pharmacy_Inventory.Models.AddMedicineViewModel
+
+@{
+}
+<h1>Add Medicine</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Type</label>
+        <input type="text" class="form-control" asp-for="Type">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Stock</label>
+        <input type="number" class="form-control" asp-for="Stock">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Expiration Date</label>
+        <input type="date" class="form-control" asp-for="ExpirationDate">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

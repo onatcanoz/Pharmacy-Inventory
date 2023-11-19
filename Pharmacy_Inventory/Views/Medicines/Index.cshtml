@@ -1,0 +1,32 @@
+﻿@model List<Pharmacy_Inventory.Models.Field.Medicine>
+
+@{
+}
+
+<h1>Medicines</h1>
+
+<table class="table">
+    <thead>
+        <tr>            
+            <th>Name</th>
+            <th>Type</th>
+            <th>Stock</th>
+            <th>Salary</th>
+            <th>ExpirationDate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var medicine in Model)
+        {
+            <tr>
+                <td>@medicine.Name</td>
+                <td>@medicine.Type</td>
+                <td>@medicine.Stock</td>
+                <td>@medicine.Salary</td>
+                <td>@medicine.ExpirationDate.ToString("dd-MM-yyyy")</td>
+                <td><a href="Medicines/View/@medicine.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
